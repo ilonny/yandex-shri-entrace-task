@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+    <div id="container">
+        <header class="header">
+            <img src="/images/logo.svg" class="header__logo">
+            <a href="create.html" class="create-meeting">Создать встречу</a>
+        </header>
+        <main class="main-content">
+            <div class="timeline">
+                <div class="calendar">
+                    <div class="calendar-arrow calendar-arrow--left">
+                        <img src="/images/arrow2.svg">
+                    </div>
+                    <a class="calendar-date" href="#">14 дек · Сегодня</a>
+                    <div class="calendar-arrow calendar-arrow--right">
+                        <img src="/images/arrow.svg">
+                    </div>
+                    <div class="calendar-wrap" id="calendar-wrap" style="display: none;">
+                        <div class="month">
+                            <div class="month-arrow month-arrow--disabled">
+                                <img src="/images/arrow2.svg">
+                            </div>
+                            <div class="month__name">Январь</div>
+                            <div class="month-arrow month-arrow">
+                                <img src="/images/arrow.svg">
+                            </div>
+                        </div>
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="df">
+                        <div class="time-item time-item--current">11:05</div>
+                        <div class="time-item time-item--disabled">8:00</div>
+                        <div class="time-item time-item--disabled">9</div>
+                        <div class="time-item time-item--disabled">10</div>
+                        <div class="time-item">11</div>
+                        <div class="time-item">12</div>
+                        <div class="time-item">13</div>
+                        <div class="time-item">14</div>
+                        <div class="time-item">15</div>
+                        <div class="time-item">16</div>
+                        <div class="time-item">17</div>
+                        <div class="time-item">18</div>
+                        <div class="time-item">19</div>
+                        <div class="time-item">20</div>
+                        <div class="time-item">21</div>
+                        <div class="time-item">22</div>
+                        <div class="time-item">23</div>
+                    </div>
+                </div>
+            </div>
+            <div class="df">
+                <div class="left-side">
+                    <div class="list">
+                        <div class="floor-item">
+                            <p class="list__floor">7 этаж</p>
+                            <a class="list-item list-item--disabled">
+                                <div class="list-item__title">Ржавый фред</div>
+                                <div class="list-item__capacity">3—6 человек</div>
+                            </a>
+                            <a href="#" class="list-item">
+                                <div class="list-item__title">Прачечная</div>
+                                <div class="list-item__capacity">до 10 человек</div>
+                            </a>
+                            <a href="#" class="list-item">
+                                <div class="list-item__title">Желтый дом</div>
+                                <div class="list-item__capacity">до 10 человек</div>
+                            </a>
+                            <a class="list-item list-item--disabled">
+                                <div class="list-item__title">Оранжевый тюльпан</div>
+                                <div class="list-item__capacity">до 10 человек</div>
+                            </a>
+                        </div>
+                        <div class="floor-item">
+                            <p class="list__floor">6 этаж</p>
+                            <a href="#" class="list-item">
+                                <div class="list-item__title">Джокер</div>
+                                <div class="list-item__capacity">3—6 человек</div>
+                            </a>
+                            <a href="#" class="list-item">
+                                <div class="list-item__title">Мариванна</div>
+                                <div class="list-item__capacity">3—6 человек</div>
+                            </a>
+                            <a href="#" class="list-item">
+                                <div class="list-item__title">Тонкий боб</div>
+                                <div class="list-item__capacity">3—6 человек</div>
+                            </a>
+                            <a href="#" class="list-item">
+                                <div class="list-item__title">Черная вдова</div>
+                                <div class="list-item__capacity">3—6 человек</div>
+                            </a>
+                            <a href="#" class="list-item">
+                                <div class="list-item__title">Белорусский ликер</div>
+                                <div class="list-item__capacity">3—6 человек</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lines">
+                    <div class="row">
+                        <div class="line">
+                            <div class="item item__full" style="width: 32.5px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 32.5px;"></div>
+                        </div>
+                        <div class="line">
+                            <div class="item item__full" style="width: 32.5px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 69.6153846px;"></div>
+                            <div class="item item__free" style="width: 195px;"></div>
+                            <div class="item item__full" style="width: 60.3846154px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 32.5px;"></div>
+                        </div>
+                        <div class="line">
+                            <div class="item item__full" style="width: 32.5px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 72.5833331px;"></div>
+                            <div class="item item__free" style="width: 57.4166665px;"></div>
+                            <div class="item item__free" style="width: 120px;"></div>
+                            <div class="item item__full" style="width: 75px;"></div>
+                            <div class="item item__full" style="width: 130px;background: gray;position: relative;z-index: 3;">
+                                <div class="item-tooltip">
+                                    <a href="#" class="edit">
+                                        <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="assets" transform="translate(-110.000000, -76.000000)">
+                                                    <g id="edit" transform="translate(108.000000, 74.000000)">
+                                                        <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
+                                                        <path d="M13.0793987,5.10592253 C13.3068671,4.87845412 13.3068671,4.49934011 13.0793987,4.28353675 L11.7145883,2.91872631 C11.4987849,2.6912579 11.1196709,2.6912579 10.8922025,2.91872631 L9.81901819,3.98607806 L12.0062144,6.17327428 L13.0793987,5.10592253 Z M2.75,11.0609288 L2.75,13.248125 L4.93719622,13.248125 L11.3879669,6.79152175 L9.20077073,4.60432553 L2.75,11.0609288 Z"
+                                                            id="ic_edit" fill="#848687" fill-rule="nonzero"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                    <div class="item-tooltip__title">Рассуждения о высоком</div>
+                                    <div class="item-tooltip__description">14 декабря, 15:00—17:00 · Жёлтый дом</div>
+                                    <div class="item-tooltip-members">
+                                        <div class="item-tooltip-member">
+                                            <img src="/images/veider.png" class="item-tooltip-member__img">
+                                            <div class="item-tooltip-member__name">Дарт Вейдер <span>и еще 12 участников</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>                            
+                            <div class="item item__full" style="width: 32.5px;"></div>
+                        </div>
+                        <div class="line">
+                            <div class="item item__full" style="width: 32.5px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 32.5px;"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="line">
+                            <div class="item item__full" style="width: 32.5px;"></div>                            
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 69.6153846px;"></div>
+                            <div class="item item__free" style="width: 119px;"></div>                            
+                            <div class="item item__full" style="width: 42.5px;"></div>
+                            <div class="item item__free" style="width: 120px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 71px;"></div>
+                        </div>
+                        <div class="line">
+                            <div class="item item__full" style="width: 32.5px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 69.6153846px;"></div>
+                            <div class="item item__free" style="width: 119px;"></div>
+                            <div class="item item__free" style="width: 120px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 42.5px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 71px;"></div>
+                        </div>
+                        <div class="line">
+                            <div class="item item__full" style="width: 32.5px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__free" style="width: 120px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 69.6153846px;"></div>
+                            <div class="item item__free" style="width: 119px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 42.5px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 71px;"></div>
+                        </div>
+                        <div class="line">
+                            <div class="item item__full" style="width: 32.5px;"></div>
+                            <div class="item item__free" style="width: 120px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 69.6153846px;"></div>
+                            <div class="item item__free" style="width: 119px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 42.5px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 71px;"></div>
+                        </div>
+                        <div class="line">
+                            <div class="item item__full" style="width: 32.5px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__free" style="width: 120px;"></div>
+                            <div class="item item__free" style="width: 119px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 69.6153846px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 42.5px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 65px;"></div>
+                            <div class="item item__full" style="width: 71px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="js/main.js"></script>    
+</body>
+</html>
+
