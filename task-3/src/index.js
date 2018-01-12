@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import App from 'containers/App'
-import 'assets/styles/style.scss'
+import 'assets/styles/main.scss'
 import { AppContainer } from 'react-hot-loader'
 
 const renderApp = Component => {

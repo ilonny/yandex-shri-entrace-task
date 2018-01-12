@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
+import HeaderComponent from 'components/HeaderComponent'
+import {
+	BrowserRouter as Router,
+	Route,
+	Link
+} from 'react-router-dom'
 class IndexContainer extends Component {
 	render() {
-		let comp = (
-			<div>
-				test
-			</div>
-		)
 		return ( 
 			<div>
-				{comp}
+				<HeaderComponent/>
+				
 			</div>
 		)
 	}
