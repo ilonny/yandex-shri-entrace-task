@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
 import Logo from 'assets/images/logo.svg'
+import { Link, BrowserRouter as Router } from 'react-router-dom'
 
 export default class HeaderComponent extends Component {
     render() {
         return (
-            <header class="header">
-                <a href="index.html">
-                    <img src={Logo} class="header__logo" />
-                </a>
-                    <a href="create.html" class="create-meeting">Создать встречу</a>
-            </header>
+            <Router>    
+                <header class="header">
+                        <Link to="/">
+                            <img src={Logo} class="header__logo" />
+                        </Link>
+                        <Link to="/create" class="create-meeting">Создать встречу</Link>
+                </header>
+            </Router>
         )
     }
 }

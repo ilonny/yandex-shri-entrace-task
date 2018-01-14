@@ -263,6 +263,8 @@ p{
                 font-weight: 500;
                 color: #000;
                 text-decoration: none;
+                cursor: pointer;
+                user-select: none;
                 &:hover{
                     color: #0070e0;
                 }

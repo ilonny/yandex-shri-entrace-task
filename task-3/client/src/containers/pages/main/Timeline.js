@@ -1,51 +1,69 @@
 import React, { Component } from 'react'
+import Calendar from 'containers/pages/main/Calendar'
+import Moment from 'react-moment'
+import 'moment/locale/ru';
 import ArrowRight from 'assets/images/arrow.svg'
 import ArrowLeft from 'assets/images/arrow2.svg'
+import { createCalendar } from 'containers/pages/main/utils'
 
 class Timeline extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            calendar: {
+                open: false,
+            }
+        }
+    }
+    openCalendar(){
+        this.setState({
+            calendar:{
+                open: !this.state.calendar.open
+            }
+        })
+        if (!this.state.calendar.open){
+            setTimeout(() => {
+                createCalendar('calendar', 2018 , 1)
+                let elems = document.querySelectorAll(".calendar-date-item")
+                elems.forEach(function(el){
+                    el.addEventListener("click", function(el){
+                        let chosenDate = el.target.getAttribute('data-date');
+                        console.log(chosenDate);
+                    })
+                })
+            }, 1);
+        }
+    }
     render() {
+
         return (
             <div class="timeline">
                 <div class="calendar">
                     <div class="calendar-arrow calendar-arrow--left">
                         <img src={ArrowLeft} />
                     </div>
-                    <a class="calendar-date" href="#">14 дек · Сегодня</a>
+                    <a class="calendar-date" onClick={() => this.openCalendar()}>
+                        <Moment locale="ru" format="DD MMM · Сегодня">
+                            {this.props.dateNow.date}
+                        </Moment>
+                    </a>
                     <div class="calendar-arrow calendar-arrow--right">
                         <img src={ArrowRight} />
                     </div>
-                    <div class="calendar-wrap" id="calendar-wrap">
-                        <div class="month">
-                            <div class="month-arrow month-arrow--disabled">
-                                <img src={ArrowLeft} />
-                            </div>
-                            <div class="month__name">Январь</div>
-                            <div class="month-arrow month-arrow">
-                                <img src={ArrowRight} />
-                            </div>
-                        </div>
-                        <div id="calendar"></div>
-                    </div>
+                    {this.state.calendar.open ? <Calendar date={this.props.dateNow} /> : ''}
                 </div>
                 <div class="time">
                     <div class="df">
-                        <div class="time-item time-item--current">11:05</div>
-                        <div class="time-item time-item--disabled">8:00</div>
-                        <div class="time-item time-item--disabled">9</div>
-                        <div class="time-item time-item--disabled">10</div>
-                        <div class="time-item">11</div>
-                        <div class="time-item">12</div>
-                        <div class="time-item">13</div>
-                        <div class="time-item">14</div>
-                        <div class="time-item">15</div>
-                        <div class="time-item">16</div>
-                        <div class="time-item">17</div>
-                        <div class="time-item">18</div>
-                        <div class="time-item">19</div>
-                        <div class="time-item">20</div>
-                        <div class="time-item">21</div>
-                        <div class="time-item">22</div>
-                        <div class="time-item">23</div>
+                        <div class="time-item time-item--current" style={{ left: this.props.dateNow.offset+'px' }}>
+                            <Moment format="HH:mm">
+                                {this.props.dateNow.date}
+                            </Moment>
+                        </div>
+                        {this.props.TimesArray.map(function(time){
+                            return (
+                                <div key={time.time} class="time-item"> {time.text}</div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>

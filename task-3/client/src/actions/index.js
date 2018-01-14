@@ -1,6 +1,6 @@
 import constants from 'constants'
 import axios from 'axios'
-
+const apiUrl = "http://localhost:3001/api"
 ////// action creators start //////
 
 export const testAction = () => {
@@ -16,12 +16,14 @@ export const testAction = () => {
 export function testAsyncAction () {
 	return dispatch => {
 		dispatch(testAction())
-		axios.post('/some-url/file.php')
+		axios.get(apiUrl+'/test')
 		.then((response) => {
-			// okay, dispatch success action
+			console.log('response', response)
 		})
 		.catch((error) => {
 			// error, dispatch error action
+			console.log('error', error)
+			
 		})
 	}
 }
