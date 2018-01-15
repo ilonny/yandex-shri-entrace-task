@@ -5,6 +5,8 @@ import 'moment/locale/ru';
 import ArrowRight from 'assets/images/arrow.svg'
 import ArrowLeft from 'assets/images/arrow2.svg'
 import { createCalendar } from 'containers/pages/main/utils'
+import { chooseDate } from 'actions/times'
+import { connect } from 'react-redux'
 
 class Timeline extends Component {
     constructor(props){
@@ -25,17 +27,17 @@ class Timeline extends Component {
             setTimeout(() => {
                 createCalendar('calendar', 2018 , 1)
                 let elems = document.querySelectorAll(".calendar-date-item")
+                let chooseDate = this.props.chooseDate;
                 elems.forEach(function(el){
                     el.addEventListener("click", function(el){
                         let chosenDate = el.target.getAttribute('data-date');
-                        console.log(chosenDate);
+                        chooseDate(chosenDate);
                     })
                 })
             }, 1);
         }
     }
     render() {
-
         return (
             <div class="timeline">
                 <div class="calendar">
@@ -43,8 +45,8 @@ class Timeline extends Component {
                         <img src={ArrowLeft} />
                     </div>
                     <a class="calendar-date" onClick={() => this.openCalendar()}>
-                        <Moment locale="ru" format="DD MMM · Сегодня">
-                            {this.props.dateNow.date}
+                        <Moment locale="ru" format="DD MMMM ">
+                            {new Date(this.props.mainReducer.chosenDate)}
                         </Moment>
                     </a>
                     <div class="calendar-arrow calendar-arrow--right">
@@ -71,4 +73,14 @@ class Timeline extends Component {
     }
 }
 
-export default Timeline
+const mapStateToProps = (state) => {
+    return {
+        mainReducer: state.mainReducer
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        chooseDate: (date) => dispatch(chooseDate(date)),
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Timeline)

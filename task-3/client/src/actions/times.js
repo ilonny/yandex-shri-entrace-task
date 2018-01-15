@@ -9,6 +9,12 @@ export const testAction = () => {
     }
 }
 
+export const chooseDate = (date) => {
+    return {
+        type: constants.CHOOSE_DATE,
+        date
+    } 
+}
 ////// action creators end //////
 
 

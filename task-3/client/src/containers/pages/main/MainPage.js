@@ -4,7 +4,6 @@ import Timeline from 'containers/pages/main/Timeline'
 import LeftSide from 'containers/pages/main/LeftSide'
 import Lines from 'containers/pages/main/Lines'
 import { testAsyncAction } from 'actions/index'
-
 class MainPage extends Component {
     componentWillMount(){
         // this.props.testAct()
@@ -15,9 +14,10 @@ class MainPage extends Component {
                 <Timeline 
                     dateNow={this.props.mainReducer.dateNow}
                     TimesArray={this.props.mainReducer.TimesArray}
+                    chooseDate = {this.props.chooseDate}
                 />
                 <div class="df">
-                    <LeftSide />
+                    <LeftSide rooms={this.props.mainReducer.rooms} />
                     <Lines />
                 </div>
             </main>
@@ -32,7 +32,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        testAct: () => dispatch(testAsyncAction())
+        testAct: () => dispatch(testAsyncAction()),
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage)
